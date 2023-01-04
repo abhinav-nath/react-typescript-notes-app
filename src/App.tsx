@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 import Header from "./components/Header";
+import NotesList from "./components/NotesList";
 import { Note } from "./models/Note";
 
 function App() {
@@ -16,7 +18,14 @@ function App() {
 
   return (
     <>
-      <Header></Header>
+      <Header />
+      <Container className="mt-5">
+        <Row>
+          <Col>
+            <NotesList />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }
